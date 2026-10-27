@@ -44,3 +44,6 @@ These rules are non-negotiable and govern all work on this project (derived from
 6. Add a test proving the token string never appears in any API response or log output.
 7. Phase 8 must grep the built frontend (`dist/`) and repository for token-like strings (`ghp_`, `github_pat_`).
 8. If the app runs without a token, it must still work with a visible warning about the lower rate limit.
+
+## 5. Repository Documentation & Sync Protocol
+1. Every time changes are pushed to GitHub, ensure root `README.md` and the GitHub repository 'About' metadata (description and topics) are kept up-to-date and reflect recent phases, features, and screenshots.
