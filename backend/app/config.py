@@ -21,7 +21,7 @@ class Settings(BaseSettings):
     MAX_FILES_TO_FETCH: int = Field(default=40, description="Max raw files to fetch per analysis")
     MAX_BYTES_PER_FILE: int = Field(default=102400, description="Max bytes per raw file (100 KB)")
     MAX_TOTAL_BYTES: int = Field(default=2097152, description="Max cumulative bytes fetched (2 MB)")
-    REQUEST_TIMEOUT_SECONDS: float = Field(default=10.0, description="GitHub API request timeout")
+    REQUEST_TIMEOUT_SECONDS: float = Field(default=25.0, description="GitHub API request timeout")
 
     @property
     def allowed_origins_list(self) -> List[str]:

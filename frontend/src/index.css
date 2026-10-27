@@ -1,0 +1,60 @@
+@import '@fontsource/geist-sans';
+@import '@fontsource/jetbrains-mono';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-0: #07080A;
+  --bg-1: #0C0E12;
+  --bg-2: #12151B;
+  --line: #1D222B;
+  --line-strong: #2A313D;
+  --text-0: #E7EAEE;
+  --text-1: #9AA3AF;
+  --text-2: #646C78;
+  --cyan: #4FD8EB;
+  --violet: #9D8CFF;
+  --amber: #E8B964;
+  --red: #F26B6B;
+}
+
+body {
+  background-color: var(--bg-0);
+  color: var(--text-0);
+  font-family: 'Geist Sans', system-ui, -apple-system, sans-serif;
+}
+
+code, pre, .font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Accessible cyan focus rings */
+:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+}
+
+/* Survey Sheet Strata Background Grid */
+.strata-grid {
+  background-image: 
+    linear-gradient(to right, #1D222B 1px, transparent 1px),
+    linear-gradient(to bottom, #1D222B 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.strata-pattern {
+  background-image: radial-gradient(#1D222B 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
