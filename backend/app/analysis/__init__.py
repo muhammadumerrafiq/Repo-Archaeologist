@@ -22,6 +22,7 @@ from .dependencies import (
     build_dependencies_report,
 )
 from .filetree import classify_file_kind, build_file_tree
+from .graph import build_architecture_graph
 from .guide import generate_plain_english_guide
 
 __all__ = [
@@ -44,5 +45,6 @@ __all__ = [
     "build_dependencies_report",
     "classify_file_kind",
     "build_file_tree",
+    "build_architecture_graph",
     "generate_plain_english_guide",
 ]
